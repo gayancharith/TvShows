@@ -2,7 +2,25 @@ import { forwardRef } from "react";
 import Image from "next/image";
 import { ThumbUpIcon } from "@heroicons/react/outline";
 
-const Thumbnail = forwardRef(({ result }, ref) => {
+type ResultType = {
+  id: string;
+  backdrop_path: string | null;
+  poster_path: string | null;
+  overview: string;
+  title: string | null;
+  original_name: string | null;
+  media_type: string | null;
+  release_date: string | null;
+  first_air_date: string | null;
+  vote_count: string;
+};
+
+interface ResultsProps {
+  result: ResultType; // my custom prop
+}
+
+const Thumbnail = forwardRef<HTMLInputElement, ResultsProps>((props, ref) => {
+  const { result } = props;
   const BASE_URL = "https://image.tmdb.org/t/p/original/";
   return (
     <div
