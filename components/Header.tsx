@@ -21,10 +21,10 @@ function Header() {
         <HeaderItem title="ACCOUNT" Icon={UserIcon} />
       </div>
       <Image
-        className="object-contain"
-        src="https://links.papareact.com/ua6"
+        className="object-contain text-white"
+        src="/logo.png"
         width={200}
-        height={100}
+        height={150}
       />
     </header>
   );
