@@ -10,6 +10,7 @@ import {
 import HeaderItem from "./HeaderItem";
 
 function Header() {
+  const calc = () => 5;
   return (
     <header className="flex flex-col sm:flex-row m-5 justify-between items-center">
       <div className="flex flex-grow justify-evenly max-w-2xl">
@@ -21,6 +22,7 @@ function Header() {
         <HeaderItem title="ACCOUNT" Icon={UserIcon} />
       </div>
       <Image
+        data-testId="logo"
         className="object-contain text-white"
         src="/logo.png"
         width={200}

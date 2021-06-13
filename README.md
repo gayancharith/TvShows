@@ -23,3 +23,17 @@ API_KEY=<your-api-key>
 yarn
 yarn dev
 ```
+
+Testing for this application is written with cypress
+
+## Run e2e tests
+
+```
+yarn cypress:open
+```
+
+## Run component tests
+
+```
+yarn cypress:open-ct
+```
