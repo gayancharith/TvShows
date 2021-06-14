@@ -1,3 +1,4 @@
+import { useRouter } from "next/router";
 import Head from "next/head";
 import Header from "../components/Header";
 import Nav from "../components/Nav";
@@ -20,6 +21,8 @@ type ResultsArrayType = Array<{
 }>;
 
 export default function Home({ results }: { results: ResultsArrayType }) {
+  const router = useRouter();
+  const handleClick = (id: string) => router.push(`/movie/${id}`);
   return (
     <div>
       <Head>
@@ -28,7 +31,10 @@ export default function Home({ results }: { results: ResultsArrayType }) {
       </Head>
       <Header />
       <Nav />
-      <Results results={results} />
+      <Results
+        handleClick={(id: string) => handleClick(id)}
+        results={results}
+      />
     </div>
   );
 }

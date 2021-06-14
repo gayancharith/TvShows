@@ -17,11 +17,21 @@ type ResultType = {
 
 type ResultsArrayType = Array<ResultType>;
 
-function Results({ results }: { results: ResultsArrayType }) {
+function Results({
+  results,
+  handleClick,
+}: {
+  results: ResultsArrayType;
+  handleClick: (id: string) => {};
+}) {
   return (
     <FlipMove className="px-5 my-10 sm:grid md:grid-cols-2 xl:grid-cols-3 3xl:flex flex-wrap justify-center">
       {results.map((result: ResultType) => (
-        <Thumbnail key={result.id} result={result} />
+        <Thumbnail
+          onClick={() => handleClick(result.id)}
+          key={result.id}
+          result={result}
+        />
       ))}
     </FlipMove>
   );
