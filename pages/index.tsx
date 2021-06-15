@@ -27,6 +27,13 @@ export default function Home({ results }: { results: ResultsArrayType }) {
     <div>
       <Head>
         <title>TV Shows & Movies</title>
+        <meta property="og:title" content="TV Shows & Movies" key="title" />
+        <meta
+          name="description"
+          property="og:description"
+          content="TV Shows & Movies"
+          key="description"
+        />
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Header />

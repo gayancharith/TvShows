@@ -22,6 +22,17 @@ const Movie = ({ result }: { result: ResultsArrayType }) => {
     <div>
       <Head>
         <title>TV Shows & Movies</title>
+        <meta
+          property="og:title"
+          content={result.original_name || "Tv shows and Movie"}
+          key="title"
+        />
+        <meta
+          name="description"
+          property="og:description"
+          content={result.overview}
+          key="description"
+        />
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Header />
@@ -33,7 +44,6 @@ const Movie = ({ result }: { result: ResultsArrayType }) => {
 export default Movie;
 
 export const getServerSideProps: GetServerSideProps = async (context) => {
-  console.log({ context });
   const id: string | string[] | undefined = context?.query?.id;
 
   const result = await fetch(

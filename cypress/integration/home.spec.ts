@@ -4,7 +4,6 @@ describe("Home Page", () => {
   });
   it("should have logo in the header", () => {
     const ab = cy.get("header").find("img");
-    console.log({ ab });
     cy.get("header").find("img").should("have.attr", "src");
   });
   it("should display Nav titles", () => {

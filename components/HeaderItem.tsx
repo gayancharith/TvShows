@@ -10,7 +10,7 @@ function HeaderItem({ title, Icon }: HeaderItemProps) {
   const router = useRouter();
   return (
     <div
-      data-testId={title.toLowerCase()}
+      data-testid={title.toLowerCase()}
       className="flex flex-col items-center cursor-pointer group w-12 sm:w-20 hover:text-white"
       onClick={() => {
         if (title.toLowerCase() === "home") {
@@ -20,7 +20,7 @@ function HeaderItem({ title, Icon }: HeaderItemProps) {
     >
       <Icon className="h-8 mb-1 group-hover:animate-bounce" />
       <p
-        data-testId={`${title.toLowerCase()}-1`}
+        data-testid={`${title.toLowerCase()}-1`}
         className="tracking-widest opacity-0 group-hover:opacity-100"
       >
         {title}

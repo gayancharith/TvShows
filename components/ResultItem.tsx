@@ -28,6 +28,7 @@ const ResultItem = forwardRef<HTMLInputElement, ResultsProps>((props, ref) => {
         {result.title || result.original_name}
       </h2>
       <Image
+        alt={result.original_name || "movie/tv"}
         layout="responsive"
         src={`${BASE_URL}/${result.backdrop_path || result.poster_path}`}
         height={1080}

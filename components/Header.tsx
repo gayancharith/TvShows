@@ -22,7 +22,8 @@ function Header() {
         <HeaderItem title="ACCOUNT" Icon={UserIcon} />
       </div>
       <Image
-        data-testId="logo"
+        alt="logo"
+        data-testid="logo"
         className="object-contain text-white"
         src="/logo.png"
         width={200}

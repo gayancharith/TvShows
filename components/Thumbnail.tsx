@@ -29,6 +29,7 @@ const Thumbnail = forwardRef<HTMLInputElement, ResultsProps>((props, ref) => {
       className="group cursor-pointer p-2 transition duration-200 ease-in transform sm:hover:scale-105 hover:z-50"
     >
       <Image
+        alt={result.original_name || "movie/tv"}
         layout="responsive"
         src={`${BASE_URL}/${result.backdrop_path || result.poster_path}`}
         height={1080}
