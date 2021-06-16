@@ -23,8 +23,8 @@ const ResultItem = forwardRef<HTMLInputElement, ResultsProps>((props, ref) => {
   const { result } = props;
   const BASE_URL = "https://image.tmdb.org/t/p/original/";
   return (
-    <div ref={ref} className="group p-2">
-      <h2 className="text-center mb-2 text-2xl sm:text-3xl md:text-5xl text-white font-bold ">
+    <div ref={ref} className="group p-2 lg:w-7/12 lg:my-0 lg:mx-auto">
+      <h2 className="text-center mb-2 text-2xl sm:text-3xl md:text-4xl text-white font-bold ">
         {result.title || result.original_name}
       </h2>
       <Image
