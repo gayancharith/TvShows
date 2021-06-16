@@ -1,4 +1,4 @@
-# TV Shows & Movies
+# TV Shows & Movies (Static Site Generation)
 
 This application has developed using Next.js, Tailwind CSS and Typescript.
 
