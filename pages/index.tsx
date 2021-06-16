@@ -5,7 +5,7 @@ import Nav from "../components/Nav";
 import Results from "../components/Results";
 import requests from "../utils/requests";
 
-import { GetServerSideProps } from "next";
+import { GetStaticProps  } from "next";
 
 type ResultsArrayType = Array<{
   id: string;
@@ -46,20 +46,16 @@ export default function Home({ results }: { results: ResultsArrayType }) {
   );
 }
 
-export const getServerSideProps: GetServerSideProps = async (context) => {
-  const genre = context.query.genre;
-  const keyTyped = genre as keyof typeof requests;
-  const genreValue = requests[keyTyped];
-
+export const getStaticProps: GetStaticProps = async() => {
   const request = await fetch(
     `https://api.themoviedb.org/3${
-      genreValue?.url || requests.fetchTrending.url
-    }`
-  ).then((res) => res.json());
+      requests.fetchTrending.url
+    }`).then((res) => res.json());
 
   return {
     props: {
       results: request.results,
     },
-  };
-};
+    revalidate: 1 * 24 * 60, // In seconds
+  }
+}
