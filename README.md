@@ -10,8 +10,8 @@ Preview the application live on [TV-Shows & Movies](https://tv-shows-teal.vercel
 
 ## How to run the application
 
-1. Go to the https://www.themoviedb.org/ ,create a account and get the api key.
-2. create .env.local in the root folder of the project and add a record like below.
+1. Go to the https://www.themoviedb.org/ ,create a account and get the api key from settings section.
+2. create .env.local in the root folder of the project and paste the below code with your api key.
 
 ```bash
 API_KEY=<your-api-key>
