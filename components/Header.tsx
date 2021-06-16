@@ -10,7 +10,6 @@ import {
 import HeaderItem from "./HeaderItem";
 
 function Header() {
-  const calc = () => 5;
   return (
     <header className="flex flex-col sm:flex-row m-5 justify-between items-center">
       <div className="flex flex-grow justify-evenly max-w-2xl">
@@ -26,8 +25,9 @@ function Header() {
         data-testid="logo"
         className="object-contain text-white"
         src="/logo.png"
-        width={200}
-        height={150}
+        width={100}
+        height={100}
+        layout="fixed"
       />
     </header>
   );
